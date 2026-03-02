@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ID Wise Bus List" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c69f1d21-15ab-43ef-a847-bcd2c883a722">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     admin_bus_details.`bus_id` AS admin_bus_details_bus_id,
+     admin_bus_details.`bus_name` AS admin_bus_details_bus_name,
+     admin_bus_details.`bus_no` AS admin_bus_details_bus_no,
+     admin_bus_details.`bus_type` AS admin_bus_details_bus_type,
+     admin_bus_details.`total_seats` AS admin_bus_details_total_seats,
+     admin_bus_details.`fare_per_seat` AS admin_bus_details_fare_per_seat
+FROM
+     `admin_bus_details` admin_bus_details]]>
+	</queryString>
+	<field name="admin_bus_details_bus_id" class="java.lang.Integer"/>
+	<field name="admin_bus_details_bus_name" class="java.lang.String"/>
+	<field name="admin_bus_details_bus_no" class="java.lang.String"/>
+	<field name="admin_bus_details_bus_type" class="java.lang.String"/>
+	<field name="admin_bus_details_total_seats" class="java.lang.Integer"/>
+	<field name="admin_bus_details_fare_per_seat" class="java.lang.String"/>
+	<group name="admin_bus_details_bus_id">
+		<groupExpression><![CDATA[$F{admin_bus_details_bus_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="802" height="76" uuid="32454369-cb9d-4648-86f5-279dbac9d7d7"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="342" y="23" width="129" height="20" uuid="d4043ee9-a93a-4f3d-b6c7-67a146237adb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ID WISE BUS LIST]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="11" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="133" height="20" uuid="8d45af26-19ae-410a-9f50-295d6ed3af3d"/>
+				<text><![CDATA[Bus ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="0" width="133" height="20" uuid="4c6cb685-1357-4de8-8de7-c8f141e8f316"/>
+				<text><![CDATA[Bus Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="0" width="133" height="20" uuid="6b2c05cd-4587-459d-a2ec-d80a9d298061"/>
+				<text><![CDATA[Bus No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="0" width="133" height="20" uuid="462386e8-a902-47a8-9a67-2eba727e5dee"/>
+				<text><![CDATA[Bus Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="532" y="0" width="133" height="20" uuid="4aad2610-cfff-4d69-95bb-a7b0bd049bb1"/>
+				<text><![CDATA[Total Seats]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="665" y="0" width="133" height="20" uuid="0fd23abe-1259-4a3a-a788-e81dad0c5009"/>
+				<text><![CDATA[Seat Fare]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="831" height="3" uuid="e083ef51-0563-4191-be3c-b0f08283b2b3"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="133" height="20" uuid="ce4fd15d-9249-43d0-be59-c6bc671faf50"/>
+				<textFieldExpression><![CDATA[$F{admin_bus_details_bus_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="0" width="133" height="20" uuid="c35ca5e0-2abd-4dea-b726-5826e9b79287"/>
+				<textFieldExpression><![CDATA[$F{admin_bus_details_bus_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="266" y="0" width="133" height="20" uuid="985fca87-7af3-4817-99e9-50be8c58b896"/>
+				<textFieldExpression><![CDATA[$F{admin_bus_details_bus_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="0" width="133" height="20" uuid="37da02ed-45cb-4c1f-9128-bace05449584"/>
+				<textFieldExpression><![CDATA[$F{admin_bus_details_bus_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="532" y="0" width="133" height="20" uuid="74d1287e-0003-42b4-90c3-de480f097e77"/>
+				<textFieldExpression><![CDATA[$F{admin_bus_details_total_seats}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="665" y="0" width="133" height="20" uuid="02c5ca5f-598d-4f35-a253-db9aae1a7a95"/>
+				<textFieldExpression><![CDATA[$F{admin_bus_details_fare_per_seat}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="831" height="4" uuid="bd9b2c81-f340-4c1a-b7c9-2b2f5092d729"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="9" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="11" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="10" splitType="Stretch"/>
+	</summary>
+</jasperReport>

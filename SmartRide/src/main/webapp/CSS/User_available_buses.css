@@ -1,0 +1,155 @@
+@charset "ISO-8859-1";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #ecf0f1;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+}
+
+.sidebar h1{
+    margin-bottom: 25px;
+    
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 20px 0;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar li:hover {
+    background-color: #34495e;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .sidebar li {
+        padding: 10px 15px;
+        white-space: nowrap;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+}
+
+.logo
+{
+	height: 140px;
+	width: 140px;
+	margin-left: 495px;
+	margin-top: 20px;
+}
+
+.profile-icon i{
+    border-radius: 50%;
+    margin-left: 2000px;
+    margin-bottom: 50px;
+    color:white;
+    font-size: 180px;
+  
+    
+}
+
+
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:active,
+.sidebar a:focus {
+    color: white !important;
+    text-decoration: none;
+    outline: none;
+}
+
+/* Hover ला सुद्धा रंग नको बदलायला */
+.sidebar a:hover {
+    color:coral !important;
+}
+
+.main-content h1{
+	color:  #2c3e50;
+	margin-left: 15px;
+	
+
+}
+
+ .bus-table {
+        width: 1050px;
+        margin-left: 15px;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .bus-table th, .bus-table td {
+        padding: 12px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .bus-table th {
+        background-color:#2c3e50;;
+        color: white;
+    }
+    
+    .bus-table tr:hover {
+        background-color: #fddddd;
+    }
+    
+    .book-btn {
+        background-color:#2c3e50;;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1em;
+        width: 90%;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    
+    .book-btn:hover {
+        background-color: #d04343;
+    }
+    

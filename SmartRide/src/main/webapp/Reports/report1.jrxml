@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5fe8e09f-6f66-40fb-be2d-996d14723727">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     seat_booking.`id` AS seat_booking_id,
+     seat_booking.`booking_id` AS seat_booking_booking_id,
+     seat_booking.`user_id` AS seat_booking_user_id,
+     seat_booking.`bus_id` AS seat_booking_bus_id,
+     seat_booking.`source` AS seat_booking_source,
+     seat_booking.`destination` AS seat_booking_destination,
+     seat_booking.`seat_number` AS seat_booking_seat_number,
+     seat_booking.`passenger_name` AS seat_booking_passenger_name,
+     seat_booking.`passenger_age` AS seat_booking_passenger_age,
+     seat_booking.`journey_date` AS seat_booking_journey_date,
+     seat_booking.`booking_date` AS seat_booking_booking_date,
+     seat_booking.`booking_status` AS seat_booking_booking_status,
+     seat_booking.`refund_status` AS seat_booking_refund_status
+FROM
+     `seat_booking` seat_booking]]>
+	</queryString>
+	<field name="seat_booking_id" class="java.lang.Integer"/>
+	<field name="seat_booking_booking_id" class="java.lang.Integer"/>
+	<field name="seat_booking_user_id" class="java.lang.Integer"/>
+	<field name="seat_booking_bus_id" class="java.lang.Integer"/>
+	<field name="seat_booking_source" class="java.lang.String"/>
+	<field name="seat_booking_destination" class="java.lang.String"/>
+	<field name="seat_booking_seat_number" class="java.lang.Integer"/>
+	<field name="seat_booking_passenger_name" class="java.lang.String"/>
+	<field name="seat_booking_passenger_age" class="java.lang.Integer"/>
+	<field name="seat_booking_journey_date" class="java.lang.String"/>
+	<field name="seat_booking_booking_date" class="java.lang.String"/>
+	<field name="seat_booking_booking_status" class="java.lang.String"/>
+	<field name="seat_booking_refund_status" class="java.lang.String"/>
+	<group name="seat_booking_id">
+		<groupExpression><![CDATA[$F{seat_booking_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,107 @@
+@charset "ISO-8859-1";
+ /* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f1;
+   
+}
+
+.login_div {
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color:#ffffff;
+      border: 2px solid  #2c3e50;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #34495e;
+    text-align: center;
+  
+}
+
+.login_div h2 {
+    margin-top: 5px;
+    margin-bottom: 15px;   /* इथे कमी gap */
+    font-size: 27px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+
+.login_div h6 {
+    margin-top: 0px;      /* हा खूप महत्त्वाचा */
+    margin-bottom: 15px;   /* आधी 10px होता → आता कमी */
+    font-size: 17px;
+    color: #2c3e50;
+}
+
+
+.login_div .image {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.login_div .textbox {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login_div .textbox:focus {
+    border-color: #2c3e50;
+    outline: none;
+}
+
+.login_div .button {
+    width: 80%;
+    padding: 10px;
+    background-color:  #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 37px;
+}
+
+.login_div .button:hover {
+    background-color: #f05454;
+}
+
+.login_div a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #2c3e50;
+}
+
+.login_div a:hover {
+    text-decoration: underline;
+      color: #f05454;
+}
+.profile_icon i{
+  
+    
+  
+     color: #2c3e50;
+    width: 30px;
+  background-color: white;
+    
+}
+.page-header {
+    text-align: center;
+    margin-top: 20px;      /* logo वर/खाली किती gap ते इथे adjust */
+    margin-bottom: 5px;
+}
+
+.login-logo {
+    height: 120px;         /* logo size */
+    width: 120px;
+    object-fit: contain;   /* distort hoणार नाही */
+}
+
+    

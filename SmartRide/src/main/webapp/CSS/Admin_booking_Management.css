@@ -1,0 +1,184 @@
+@charset "ISO-8859-1";
+
+/* BASIC RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY LAYOUT */
+body {
+    display: flex;
+    height: 100vh;
+}
+
+/* MAIN CONTAINER */
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+}
+
+.sidebar h1 {
+    margin-bottom: 25px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 20px 0;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar li:hover {
+    background-color: #34495e;
+}
+
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:active,
+.sidebar a:focus {
+    color: white !important;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: coral !important;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+    overflow-y: auto;
+}
+
+.main-content h1 {
+    color: #2c3e50;
+}
+
+/* COMPANY LOGO */
+.logo {
+    height: 140px;
+    width: 140px;
+    margin-left: 400px;
+}
+
+/* TABLE DESIGN */
+.booking-table {
+    width: 1050px;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.booking-table th {
+    background-color: #1f3349;
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    text-align: center;
+}
+
+.booking-table td {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.booking-table tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.2s;
+}
+
+/* FLEX FOR ACTION BUTTONS */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* ================================
+     BUTTON STYLES (FINAL CLEAN)
+   ================================ */
+
+/* Common Button */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-right: 6px;
+}
+
+/* Confirm (Green) */
+.btn-view {
+    background-color: #28a745;
+    color: white;
+}
+.btn-view:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+.btn-view:active {
+    background-color: #1e7e34;
+    transform: scale(1);
+}
+
+/* Cancel (Red) */
+.btn-cancel {
+    background-color: #dc3545;
+    color: white;
+}
+.btn-cancel:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+.btn-cancel:active {
+    background-color: #a71d2a;
+    transform: scale(1);
+}
+
+/* RESPONSIVE SIDEBAR */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .sidebar li {
+        padding: 10px 15px;
+        white-space: nowrap;
+    }
+}

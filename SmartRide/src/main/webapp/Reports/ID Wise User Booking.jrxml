@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ID Wise User Booking" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="61f96902-8889-49c4-8110-ee3f9a43bee3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     seat_booking.`id` AS seat_booking_id,
+     seat_booking.`booking_id` AS seat_booking_booking_id,
+     seat_booking.`user_id` AS seat_booking_user_id,
+     seat_booking.`bus_id` AS seat_booking_bus_id,
+     seat_booking.`source` AS seat_booking_source,
+     seat_booking.`destination` AS seat_booking_destination,
+     seat_booking.`seat_number` AS seat_booking_seat_number,
+     seat_booking.`passenger_name` AS seat_booking_passenger_name,
+     seat_booking.`passenger_age` AS seat_booking_passenger_age,
+     seat_booking.`journey_date` AS seat_booking_journey_date,
+     seat_booking.`booking_date` AS seat_booking_booking_date,
+     seat_booking.`booking_status` AS seat_booking_booking_status,
+     seat_booking.`refund_status` AS seat_booking_refund_status
+FROM
+     `seat_booking` seat_booking]]>
+	</queryString>
+	<field name="seat_booking_id" class="java.lang.Integer"/>
+	<field name="seat_booking_booking_id" class="java.lang.Integer"/>
+	<field name="seat_booking_user_id" class="java.lang.Integer"/>
+	<field name="seat_booking_bus_id" class="java.lang.Integer"/>
+	<field name="seat_booking_source" class="java.lang.String"/>
+	<field name="seat_booking_destination" class="java.lang.String"/>
+	<field name="seat_booking_seat_number" class="java.lang.Integer"/>
+	<field name="seat_booking_passenger_name" class="java.lang.String"/>
+	<field name="seat_booking_passenger_age" class="java.lang.Integer"/>
+	<field name="seat_booking_journey_date" class="java.lang.String"/>
+	<field name="seat_booking_booking_date" class="java.lang.String"/>
+	<field name="seat_booking_booking_status" class="java.lang.String"/>
+	<field name="seat_booking_refund_status" class="java.lang.String"/>
+	<group name="seat_booking_user_id">
+		<groupExpression><![CDATA[$F{seat_booking_user_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="802" height="79" uuid="3531dd2e-6950-4978-8c34-cfbf91e280e6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="305" y="26" width="203" height="20" uuid="1f010a1b-8f68-4f08-8673-42957cf83d9f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[USER BOOKING LIST]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="61" height="20" uuid="3caab9e2-17af-4780-bb40-f13f6dd6da9a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="0" width="61" height="20" uuid="b507e39e-4650-429f-9399-91100bfaf524"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="0" width="61" height="20" uuid="de4ea266-cce4-49cd-81c1-6d6f219fd44a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[User ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="0" width="61" height="20" uuid="cc6d4292-0df9-4e9a-b9d7-d692823d785a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bus ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="0" width="61" height="20" uuid="c5b95893-22a0-4594-b975-cf9141398d81"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Source]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="0" width="61" height="20" uuid="9da6e5a2-bb73-424f-9f24-9b067e079625"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Destination]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="0" width="61" height="20" uuid="5864a936-53c8-47f7-9ab1-cea5a6e86a8d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Seat Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="0" width="61" height="20" uuid="00305063-90e2-49c1-b2e6-dcc4adf77e71"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Passenger NAme]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="0" width="61" height="20" uuid="70d2db90-872a-4f47-8a0e-0d9a439dedf9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Age]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="549" y="0" width="61" height="20" uuid="af13d3ec-75cd-44c6-bf85-e99f39dfd5eb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Journey Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="0" width="61" height="20" uuid="08620534-0bca-4ccf-8ce3-2d4e76965ff1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="671" y="0" width="61" height="20" uuid="03b7edff-272b-4f08-ac3c-9311a5347b32"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="732" y="0" width="61" height="20" uuid="f795fb5d-ff4d-4457-a2a3-409030482f12"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Refund Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="61" height="20" uuid="26bd9574-873d-4a1c-be58-730dc2ccdc55"/>
+				<textFieldExpression><![CDATA[$F{seat_booking_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="0" width="61" height="20" uuid="f9c9d250-1be4-4860-8bcc-4875e429755a"/>
+				<textFieldExpression><![CDATA[$F{seat_booking_booking_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="122" y="0" width="61" height="20" uuid="1307bf5c-8567-4090-8f92-2412cd1006aa"/>
+				<textFieldExpression><![CDATA[$F{seat_booking_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="0" width="61" height="20" uuid="9160b7ce-fa55-4fb2-a64b-cd77e075f3cc"/>
+				<textFieldExpression><![CDATA[$F{seat_booking_bus_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="0" width="61" height="20" uuid="33012a60-47b5-4978-93c6-629dd1ec9467"/>
+				<textFieldExpression><![CDATA[$F{seat_booking_source}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="0" width="61" height="20" uuid="e56da4d7-2d09-4737-846d-bbfa4e4d143a"/>
+				<textFieldExpression><![CDATA[$F{seat_booking_destination}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="0" width="61" height="20" uuid="b6003a0b-2551-4a69-b13a-cc393e95f2e9"/>
+				<textFieldExpression><![CDATA[$F{seat_booking_seat_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="0" width="61" height="20" uuid="2ee63d14-ed43-4db8-a727-8cf2ebded2c6"/>
+				<textFieldExpression><![CDATA[$F{seat_booking_passenger_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="0" width="61" height="20" uuid="ead23252-a856-47c2-9cfd-13331562a445"/>
+				<textFieldExpression><![CDATA[$F{seat_booking_passenger_age}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="0" width="61" height="20" uuid="08bed118-22e3-48f1-99cd-02558c711fe3"/>
+				<textFieldExpression><![CDATA[$F{seat_booking_journey_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="610" y="0" width="61" height="20" uuid="1e754e21-5a6c-4881-912d-fbca17f26ae6"/>
+				<textFieldExpression><![CDATA[$F{seat_booking_booking_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="671" y="0" width="61" height="20" uuid="218110da-e4ef-4b35-9dba-a4f483038ac9"/>
+				<textFieldExpression><![CDATA[$F{seat_booking_booking_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="732" y="0" width="61" height="20" uuid="88af5231-d616-47a9-b375-bf565ffef0c5"/>
+				<textFieldExpression><![CDATA[$F{seat_booking_refund_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="7" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="6" splitType="Stretch"/>
+	</summary>
+</jasperReport>

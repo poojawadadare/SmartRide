@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #ecf0f1;
+}
+
+.main-content {
+    text-align: center;
+    padding: 40px;
+}
+
+
+
+.signup-box {
+    background-color: #ffffff;
+    border: 2px solid #2c3e50;
+    border-radius: 20px;
+    width: 500px;
+    padding: 30px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.signup-box h2 {
+    color: #2c3e50;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 1em;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.profile_icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile_icon i {
+    color: #2c3e50;
+    background: white;
+    font-size: 20px;
+}
+
+.profile_icon input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    font-size: 1em;
+}
+
+.signup-btn {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #d04343;
+}
+
+.extra-links {
+    margin-top: 15px;
+    font-size: 17px;
+}
+.extra-links a {
+    color: #f05454;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+.page-header {
+    text-align: center;
+    margin-top: 20px;      /* logo वर/खाली किती gap ते इथे adjust */
+    margin-bottom: -60px;
+}
+
+.login-logo {
+    height: 120px;         /* logo size */
+    width: 120px;
+    object-fit: contain;   /* distort hoणार नाही */
+}
